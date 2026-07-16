@@ -3,7 +3,7 @@
 #include <dt-bindings/zmk/input_transform.h>
 
 &pointing_listener {
-    input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
+    input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT) &right_pointer_scale>;
 };
 
 &size_s_transform {
@@ -16,4 +16,12 @@
 
 &size_l_transform {
     col-offset = <7>;
+};
+
+/* Right-side pointer scale: apply per-axis scaling (percent). */
+&right_pointer_scale {
+    compatible = "zmk,input-transform-scale";
+    /* scale values are percentage: 50 = 50% (reduce to 50%) */
+    x-scale = <50>;
+    y-scale = <50>;
 };
