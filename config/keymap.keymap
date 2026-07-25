@@ -12,6 +12,21 @@
             bindings = <&mo 2>;
             key-positions = <59 60>;
         };
+
+        mkp_mb1 {
+            bindings = <&mkp MB1>;
+            key-positions = <33 34>;
+        };
+
+        mkp_mb2 {
+            bindings = <&mkp MB2>;
+            key-positions = <34 35>;
+        };
+
+        mkp_mb3 {
+            bindings = <&mkp MB3>;
+            key-positions = <35 33>;
+        };
     };
 
     keymap {
